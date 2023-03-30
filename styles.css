@@ -6,7 +6,6 @@
     --cyber-yellow: #defe47;
     --cyber-green: #1afe49;
     --cyber-fuschia: #ff124f;
-
 }
 
 body {
@@ -33,7 +32,7 @@ a {
 .sidebar {
     background-color: var(--cyber-darkblue);
     grid-area: sidebar;
-    padding-left: 15px;
+    padding-left: 20px;
     color: var(--cyber-yellow);
     text-shadow: 0px 0px 3px var(--cyber-yellow);
     padding-top: 20px;
@@ -50,8 +49,8 @@ a {
 }
 
 /* align sidebar icons  */
-.sidebar-group1 > div,
-.sidebar-group2 > div {
+.sidebar-group1 > a,
+.sidebar-group2 > a {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: start;
@@ -64,6 +63,13 @@ svg {
     height: 30px;
     width: 30px;
     display: inline-block;
+    filter: drop-shadow(0px 0px 3px var(--cyber-yellow));
+}
+
+.svg-btn:hover,
+a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .dashboard-logo {
@@ -97,15 +103,78 @@ svg {
 
 .top-row {
     display: grid;
-    grid-template-columns: 6fr 1fr 1fr 2fr;
+    grid-template-columns: auto auto;
     align-items: center;
+    justify-content: space-between;
+}
+
+#searchBar {
+    width: clamp(200px, 40vw, 500px);
+    height: 2rem;
+    border-radius: 15px;
+    text-indent: 10px;
+    background-color: #262e63;
+    box-shadow: inset 2px 2px 10px #141f65;
+    border-style: none;
+}
+
+#searchBar:focus,
+#searchBar:hover {
+    outline: none;
+    background-color: #3c499f;
+}
+
+
+.top-row-left{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.top-row-right {
+    display:inline-grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.dark-theme:hover {
+    transform: scale(1.1);
+    animation-duration: 1000ms;
+    fill: white;
+
 }
 
 .bottom-row {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr;
     gap: 20px;
     align-items: center;
+}
+
+.bottom-row-left {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome-icon {
+    height: 80px;
+    width: 80px;
+    padding-left: 15px;
+}
+
+.bottom-row-right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-self: end;
+    gap: 20px;
+    padding: 20px;
 }
 
 .main {
