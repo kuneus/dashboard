@@ -1,41 +1,98 @@
+:root {
+    --cyber-darkblue:  #383e65;
+    --cyber-dark: rgb(52, 52, 52);
+    --cyber-light-purple: #ac61b9;
+    --cyber-lightblue: #05d9e8;
+    --cyber-yellow: #defe47;
+    --cyber-green: #1afe49;
+    --cyber-fuschia: #ff124f;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Exo';
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     display: grid;
     grid-template: 1fr 4fr / 1fr 3fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main";
-    height: 98vh;
+    height: 100vh;
 }
 
 .sidebar {
-    background-color: cornflowerblue;
+    background-color: var(--cyber-darkblue);
     grid-area: sidebar;
     padding-left: 15px;
+    color: var(--cyber-yellow);
+    text-shadow: 0px 0px 3px var(--cyber-yellow);
+    padding-top: 20px;
+    font-family: 'Exo', sans-serif;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .sidebar-header {
-    border: 1px solid #000;
     font-size: 2rem;
     padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* align sidebar icons  */
+.sidebar-group1 > div,
+.sidebar-group2 > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+
+svg {
+    fill: var(--cyber-yellow);
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+
+.dashboard-logo {
+    height: 40px;
+    width: 40px;
+}
+
+.dashboard-logo + div {
+    display: inline-block;
 }
 
 .sidebar-group1 {
-    border: 1px solid #000;
-    font-size: 1rem;
     padding-bottom: 40px;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 
 .sidebar-group2 {
-    border: 1px solid #000;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 
 .header {
-    background-color: blanchedalmond;
+    background-color: var(--cyber-darkblue);
+    border-radius: 10px;
+    margin: 10px;
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    color: var(--cyber-yellow);
+    text-shadow: 0px 0px 8px var(--cyber-yellow);
 }
 
 .top-row {
@@ -52,7 +109,7 @@
 }
 
 .main {
-    background-color: rgb(201, 201, 201);
+    background-color: var(--cyber-darkblue);
     grid-area: main;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
@@ -61,6 +118,8 @@
         "cards trending";
     gap: 15px;
     padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .card-container {
@@ -73,6 +132,7 @@
 .cards {
     background-color: white;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .announcements-container {
