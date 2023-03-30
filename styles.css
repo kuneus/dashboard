@@ -39,11 +39,14 @@ a {
     font-family: 'Exo', sans-serif;
     border-radius: 10px;
     margin: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    gap: 40px;
 }
 
 .sidebar-header {
     font-size: 2rem;
-    padding-bottom: 40px;
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -58,11 +61,11 @@ a {
     align-items: center;
 }
 
+/* set basic styling for SVG icons on page */
 svg {
     fill: var(--cyber-yellow);
     height: 30px;
     width: 30px;
-    display: inline-block;
     filter: drop-shadow(0px 0px 3px var(--cyber-yellow));
 }
 
@@ -77,16 +80,7 @@ a:hover {
     width: 40px;
 }
 
-.dashboard-logo + div {
-    display: inline-block;
-}
-
-.sidebar-group1 {
-    padding-bottom: 40px;
-    line-height: 3rem;
-}
-
-.sidebar-group2 {
+.sidebar > div {
     line-height: 3rem;
 }
 
