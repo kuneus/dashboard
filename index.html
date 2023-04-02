@@ -14,7 +14,7 @@
         <div class="container">
             <div class="sidebar">
                 <div class="sidebar-header"> 
-                    <svg class="dashboard-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,5V7H15V5H19M9,5V11H5V5H9M19,13V19H15V13H19M9,17V19H5V17H9M21,3H13V9H21V3M11,3H3V13H11V3M21,11H13V21H21V11M11,15H3V21H11V15Z" /></svg>
+                    <svg id="dashboard-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,5V7H15V5H19M9,5V11H5V5H9M19,13V19H15V13H19M9,17V19H5V17H9M21,3H13V9H21V3M11,3H3V13H11V3M21,11H13V21H21V11M11,15H3V21H11V15Z" /></svg>
                     <span>Dashboard</span>
                 </div>
                 <div class="sidebar-group1">
@@ -65,7 +65,7 @@
                         <input type="search" id="searchBar">
                     </div>
                     <div class="top-row-right">
-                        <svg class="notifications svg-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
+                        <svg class="notifications-icon svg-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
                         <svg class ="dark-theme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" /></svg>
                         <div class="full-name">Kuni Nishimura</div>
                     </div>
@@ -75,7 +75,7 @@
                         <svg class="welcome-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C13.1 2 14 2.9 14 4S13.1 6 12 6 10 5.1 10 4 10.9 2 12 2M15.9 8.1C15.5 7.7 14.8 7 13.5 7H11C8.2 7 6 4.8 6 2H4C4 5.2 6.1 7.8 9 8.7V22H11V16H13V22H15V10.1L19 14L20.4 12.6L15.9 8.1Z" /></svg>
                         <div>
                             <p>Welcome,</p>
-                            <p>Kuni Nishimura (@kuninish)</p>
+                            <p>Kuni Nishimura <a href="https://github.com/kuneus">(@kuneus)</a></p>
                         </div>
                     </div>
                     <div class="bottom-row-right">
@@ -87,43 +87,115 @@
             </div>
             <div class="main">
                 <div class="main-left">
-                    <div class="cards-header">Your Projects</div>
+                    <span class="main-titles">Your Projects</span>
                     <div class="card-container">
                         <div class="cards">
-                            <h1>Calculator</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/Calculator/">Calculator</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/Calculator">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/Calculator/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/calculator.png" alt="thumbnail image">
+                            <h5>An iPhone calculator replica! Computes basic arithmetic and adheres to order of operations.</h5>
                         </div>
                         <div class="cards">
-                            <h1>Crack the Code</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/Crack-the-code/">Crack the Code</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/Crack-the-code">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/Crack-the-code/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/crack-the-code.png" alt="thumbnail image">
+                            <h5>A puzzle game where you must use deductive thinking to decipher a 3-digit lock based on clues.</h5>
                         </div>
                         <div class="cards">
-                            <h1>Rock Paper Scissors</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/Rock-Paper-Scissors/">Rock Paper Scissors</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/Rock-Paper-Scissors">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/Rock-Paper-Scissors/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/rps.png" alt="thumbnail image">
+                            <h5>The classic rock-paper-scissors game! First to 5 wins.</h5>
                         </div>
                         <div class="cards">
-                            <h1>Sign-up form</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/Sign-up-form/">Sign-up Form</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/sign-up-form">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/Sign-up-form/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/sign-up-form.png" alt="thumbnail image">
+                            <h5>Sign-up form with client-side input validation.</h5>
                         </div>
                         <div class="cards">
-                            <h1>Etch a Sketch</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/etch-a-sketch/">Etch-A-Sketch</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/etch-a-sketch">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/etch-a-sketch/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/etch-a-sketch.png" alt="thumbnail image">
+                            <h5>Sketch a pixelated drawing with a grid density and color of choice.</h5>
                         </div>
                         <div class="cards">
-                            <h1>Landing Page</h1>
-                            <h2>blah blah blah</h2>
+                            <div>
+                                <h2><a href="https://kuneus.github.io/TOP-Landing-Page/">Landing Page</a></h2>
+                                <div>
+                                    <a href="https://github.com/kuneus/TOP-Landing-Page">
+                                        <svg class="repo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z" /></svg>
+                                    </a>
+                                    <a href="https://kuneus.github.io/TOP-Landing-Page/">
+                                        <svg class="live-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" /></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/landing-page.png" alt="thumbnail image">
+                            <h5>A basic landing page layout using CSS flexbox.</h5>
                         </div>
                     </div>
                 </div>
                 <div class="main-right">
-                    <div class="announcements-header">Announcements</div>
-                    <div class="announcements-card">
-                        <div class="announcements">Site Maintenance</div>
-                        <div class="announcements">Community Share Day</div>
-                        <div class="announcements">Upload Privacy Policy</div>
+                    <span class="main-titles">Announcements</span>
+                    <div class="announcements-card main-right-cards">
+                        <div class="announcements">Site Maintenance
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, ...</p>
+                        </div>
+                        <div class="announcements">Community Share Day
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, ...</p>
+                        </div>
+                        <div class="announcements">Upload Privacy Policy
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, ...</p>
+                        </div>
                     </div>
-                    <div class="trending-header">Trending</div>
-                    <div class="trending-card">
+                    <span class="main-titles" id="trending-header">Trending</span>
+                    <div class="trending-card main-right-cards">
                         <div class="trending">r/all</div>
                         <div class="trending">r/learnprogramming</div>
                         <div class="trending">r/theodinproject</div>
