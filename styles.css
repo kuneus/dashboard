@@ -1,26 +1,58 @@
 :root {
-    --cyber-darkblue:  #383e65;
-    --cyber-dark: rgb(52, 52, 52);
     --cyber-light-purple: #827cff;
-    --cyber-lightblue: #e3e3e3;
-    --cyber-yellow: white;
+    --small-font-color: #e3e3e3;
+    --current-theme-color: rgb(18, 18, 18);
     --cyber-green: #1afe49;
-    --cyber-fuschia: #ff124f;
-    --linear-gradient:  linear-gradient(1deg, rgb(70, 70, 70) 0%, rgb(60, 60, 60) 100%);
-    /* --linear-gradient:  linear-gradient(45deg, rgb(43, 43, 70) 42%, rgb(68, 41, 54) 100%); */
-    --text-shadow: 0px 0px 3px var(--cyber-yellow);
-    --orange:  rgb(255, 200, 99);
+    --container-gradient:  linear-gradient(1deg, rgb(70, 70, 70) 0%, rgb(60, 60, 60) 100%);
+    --medium-font-color:  rgb(255, 200, 99);
     --red:  rgb(254, 108, 75);
+}
+
+:root.dark {
+    --current-theme-color: rgb(18, 18, 18);
+    --big-font-color:  rgb(254, 108, 75);
+    --medium-font-color:  rgb(255, 200, 99);
+    --small-font-color: #e3e3e3;
+    --cyber-light-purple: #827cff;
+    --cyber-green: #1afe49;
+
+    --container-gradient:  linear-gradient(1deg, rgb(70, 70, 70) 0%, rgb(60, 60, 60) 100%);
+    --container-bxs:  inset 10px 10px 70px rgba(5, 5, 5, 0.2);
+    --page-background-color: rgb(31, 31, 31);
+    --card-background-color: rgba(18, 18, 18, 0.382);
+    --card-box-shadow:  inset 10px 10px 70px rgba(5, 5, 5, 0.2);
+    --left-card-border:  rgb(14, 14, 14);
+    --searchbar-bgc:  rgb(51, 51, 51);
+    --searchbar-bxs:  inset 2px 2px 10px #232323;
+    --searchbar-hover:  #575757;
+    
+}
+
+:root.light {
+    --current-theme-color: #ffc800;
+    --big-font-color:  #272727;
+    --medium-font-color:  #545454;
+    --small-font-color: rgb(18, 18, 18);
+    --cyber-light-purple: #453bff;
+    --cyber-green: #00d24d;
+
+    --container-gradient:  linear-gradient(1deg, rgb(248, 248, 248) 0%, rgb(245, 244, 244) 100%);    
+    --container-bxs:  inset 10px 10px 70px rgba(227, 227, 227, 0.2);
+    --page-background-color: #ffffff;
+    --card-background-color: rgba(184, 184, 184, 0.382);;
+    --card-box-shadow:  inset 10px 10px 70px rgba(147, 147, 147, 0.2);
+    --left-card-border:  #4d4d4d;
+    --searchbar-bgc:  #c4c4c4;
+    --searchbar-bxs:  inset 2px 2px 10px #999999;
+    --searchbar-hover:  #E6F4F1;
+    
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Exo';
-    background-color: rgb(31, 31, 31);
-    /* color: white;
-    text-shadow: 0px 0px 3px white; */
-    color: var(--cyber-yellow); 
+    background-color: var(--page-background-color);
 }
 
 a {
@@ -28,11 +60,8 @@ a {
     color: inherit;
 }
 
-/* set basic styling for SVG icons on page */
+/* set sizing for SVG icons */
 svg {
-    fill: var(--cyber-yellow);
-    /* fill: white;
-    filter: drop-shadow(0px 0px 3px white); */
     height: 30px;
     width: 30px;
 }
@@ -53,31 +82,28 @@ a:hover {
 }
 
 .sidebar {
-    background-color: var(--cyber-darkblue);
-    background: var(--linear-gradient);
+    background: var(--container-gradient);
     grid-area: sidebar;
     padding-left: 20px;
     padding-top: 20px;
     font-family: 'Exo', sans-serif;
-    /* border-radius: 10px;
-    margin: 10px; */
     display: grid;
     grid-template-rows: auto auto auto;
     align-content: start;
     gap: 40px;
-    box-shadow: inset 10px 10px 70px rgba(5, 5, 5, 0.2);
-    color: var(--orange);
+    box-shadow: var(--container-bxs);
+    color: var(--medium-font-color);
 }
 
 .sidebar svg {
-    fill: rgb(255, 200, 99);
+    fill: var(--medium-font-color);
 }
 
 .sidebar-header {
     font-size: 2rem;
     display: grid;
     grid-template-columns: auto auto;
-    color: var(--red);
+    color: var(--big-font-color);
 }
 
 /* align sidebar icons  */
@@ -93,7 +119,7 @@ a:hover {
 #dashboard-logo {
     height: 40px;
     width: 40px;
-    fill: var(--red);
+    fill: var(--big-font-color);
 }
 
 .sidebar > div {
@@ -101,14 +127,13 @@ a:hover {
 }
 
 .header {
-    background-color: var(--cyber-darkblue);
     border-radius: 10px;
     margin: 10px;
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    background: var(--linear-gradient);
-    box-shadow: inset 10px 10px 70px rgba(5, 5, 5, 0.2);
+    background: var(--container-gradient);
+    box-shadow:var(--container-bxs);
 }
 
 .top-row {
@@ -119,7 +144,7 @@ a:hover {
 }
 
 .search-icon {
-    fill: var(--orange);
+    fill: var(--medium-font-color);
 }
 
 #searchBar {
@@ -127,15 +152,15 @@ a:hover {
     height: 2rem;
     border-radius: 15px;
     text-indent: 10px;
-    background-color: rgb(51, 51, 51);
-    box-shadow: inset 2px 2px 10px #232323;
+    background-color: var(--searchbar-bgc);
+    box-shadow: var(--searchbar-bxs);
     border-style: none;
 }
 
 #searchBar:focus,
 #searchBar:hover {
     outline: none;
-    background-color: #d1d1d1;
+    background-color: var(--searchbar-hover);
 }
 
 
@@ -159,14 +184,19 @@ a:hover {
     fill: rgb(231, 231, 102);
 }
 
+.dark-theme {
+    fill: var(--current-theme-color);
+}
+
 .dark-theme:hover {
     transform: scale(1.1);
     animation-duration: 1000ms;
-    fill: white;
+    fill: var(--small-font-color);
+    cursor:pointer;
 }
 
 .full-name {
-    color: var(--orange);
+    color: var(--medium-font-color);
 }
 
 .bottom-row {
@@ -188,11 +218,11 @@ a:hover {
     height: 80px;
     width: 80px;
     padding-left: 15px;
-    fill: var(--orange);
+    fill: var(--medium-font-color);
 }
 
 .bottom-row-left div p {
-    color: var(--orange);
+    color: var(--medium-font-color);
 }
 
 /* font style for GitHub profile link in header */
@@ -213,8 +243,18 @@ a:hover {
     fill: var(--cyber-light-purple);
 }
 
+.header-btns {
+    width: 60px;
+    height: 25px;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    border-style: none;
+    cursor:pointer;
+    background-color: var(--medium-font-color);
+    color:  var(--page-background-color);
+}
+
 .main {
-    background-color: var(--cyber-darkblue);
     grid-area: main;
     display: grid;
     grid-template-columns: 3fr minmax(200px, 1fr);
@@ -222,14 +262,14 @@ a:hover {
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
-    background: var(--linear-gradient);
-    box-shadow: inset 10px 10px 70px rgba(5, 5, 5, 0.2);
+    background: var(--container-gradient);
+    box-shadow: var(--container-bxs);
 }
 
 .main-titles {
     padding-bottom: 10px;
     font-size: 1.5rem;
-    color: var(--red);
+    color: var(--big-font-color);
 }
 
 .main-left {
@@ -244,26 +284,33 @@ a:hover {
 }
 
 .cards {
-    background-color: white;
     border-radius: 10px;
-    padding: 20px;
-    border-left: solid 12px rgb(14, 14, 14);
-    background-color: rgba(18, 18, 18, 0.382);
-    box-shadow: inset 10px 10px 70px rgba(5, 5, 5, 0.2);
-    /* display: grid;
-    grid-template-rows: auto auto auto;
-    gap: 10px; try our flex display next!*/
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border-left: 10px solid var(--left-card-border);
+}
+
+/* Set background color and box shadow for all cards */
+.cards,
+.main-right-cards {
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);
 }
 
 img {
-    /* height: 138px; */
-    height: minmax(138px, 80%);
-    /* width: 250px; */
-    width: minmax(250px, 90%);
-    border-radius: 10px;
+    width: minmax(300px, 100%);
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.cards > div:nth-child(2) {
+    padding: 10px 10px 5px 10px;
+}
+
+.cards > div:nth-child(3) {
+    padding: 0px 10px 10px 10px;
 }
 
 .cards h2,
@@ -281,7 +328,7 @@ img {
 
 /* Font color style for project descripts */
 .cards h5 {
-    color: var(--cyber-lightblue);
+    color: var(--small-font-color);
 }
 
 .repo {
@@ -310,7 +357,7 @@ img {
 .announcements,
 .trending,
 .cards h2 {
-    color: var(--orange);
+    color: var(--medium-font-color);
 }
 
 .trending-card {
@@ -318,8 +365,6 @@ img {
 }
 
 .main-right-cards {
-    background-color: rgba(18, 18, 18, 0.382);
-    box-shadow: inset 10px 10px 70px rgba(5, 5, 5, 0.2);
     border-radius: 10px;
     align-items: center;
     display: grid;
@@ -337,7 +382,7 @@ img {
 
 .main-right-cards > div > p {
     font-size: 0.8rem;
-    color: var(--cyber-lightblue);
+    color: var(--small-font-color);
     text-shadow: none;
 }
 
